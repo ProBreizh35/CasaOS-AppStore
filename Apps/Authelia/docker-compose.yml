@@ -1,0 +1,49 @@
+name: authelia
+services:
+  authelia:
+    image: authelia/authelia:latest
+    restart: unless-stopped 
+    environment:
+      - TZ=$TZ
+      - type: bind
+        source: /DATA/AppData/$AppID
+        target: /app/config
+    x-casaos:
+      volumes:
+        - container: /app/config
+          description:
+            en_us: Authelia data directory.
+            fr_fr: Répertoire des données de Authelia
+    container_name: authelia
+x-casaos:
+  main: authelia
+  author: ProBreizh35
+  category: Network
+  description:
+    en_us: Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies by allowing, denying, or redirecting requests.
+    fr_fr: Authélia est un serveur d'authentification et d'autorisation open-source fournissant une authentification à deux facteurs connexion (SSO) pour vos applications via un portail web. Il agit comme un compagnon pour proxys inversés par autoriser, refuser ou rediriger les demandes.
+  developer: authelia
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/icon.png
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/screenshot-1.jpg
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/screenshot-2.jpg
+  tagline:
+    en_us: Authelia is an open-source authentication and authorization server.
+    fr_fr: Authélia est un serveur d'authentification et d'autorisation.
+  thumbnail: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/thumbnail.png
+  tips:
+    before_install:
+      en_us:  |
+        ⚠️ Proxy support:
+          Authelia works in combination with nginx, Traefik, Caddy, Skipper, Envoy, or HAProxy.
+
+          Documentation:
+          
+        1: The YAML configuration template config.template.yml has comments with very limited documentation on the effective use of a particular option. All documentation lines start with ##. Lines starting with a single # are YAML configuration options which are commented to disable them or as examples.
+        
+        2: This documentation site. Generally each section of the configuration is in its own section of the documentation site. Each configuration option is listed in its relevant section as a heading, under that heading generally are two or three colored labels.
+        The type label is purple and indicates the YAML value type of the variable. It optionally includes some additional information in parentheses.
+        The default label is blue and indicates the default value if you don’t define the option at all. This is not the same value as you will see in the examples in all instances, it is the value set when blank or undefined.
+        The required label changes color. When required it will be red, when not required it will be green, when the required state depends on another configuration value it is yellow.
+
+        
