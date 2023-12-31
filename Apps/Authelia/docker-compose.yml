@@ -1,7 +1,11 @@
 name: authelia
 services:
   authelia:
-    image: authelia/authelia:4
+    image: authelia/authelia:4.37.5
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
     restart: unless-stopped 
     environment:
       - TZ=$TZ
