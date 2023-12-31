@@ -25,6 +25,8 @@ services:
       - type: bind
         source: /DATA/AppData/$AppID/data
         target: /gotify
+        mode": rw
+        allocation": automatic
     x-casaos:
       ports:
         - container: "80"
@@ -43,6 +45,7 @@ x-casaos:
     - arm
   main: Gotify
   author: ProBreizh35
+  developer: Gotify
   category: Utilities
   description:
     fr_fr: Gotify est un system de notification auto heberger
