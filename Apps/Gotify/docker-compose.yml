@@ -9,7 +9,7 @@ services:
     network_mode: bridge
     ports:
       - target: 2222
-        published: "2222"
+        published: "80"
         protocol: tcp
     restart: always
     environment:
