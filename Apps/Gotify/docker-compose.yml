@@ -8,8 +8,8 @@ services:
           memory: 64M
     network_mode: bridge
     ports:
-      - target: 2222
-        published: "80"
+      - target: 80
+        published: "2222"
         protocol: tcp
     restart: always
     environment:
