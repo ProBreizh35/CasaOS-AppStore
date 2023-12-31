@@ -17,6 +17,11 @@ services:
             fr_fr: Répertoire des données de Authelia
     container_name: authelia
 x-casaos:
+  architectures:
+    - amd64
+    - "386"
+    - arm64
+    - arm
   main: authelia
   author: ProBreizh35
   category: Network
