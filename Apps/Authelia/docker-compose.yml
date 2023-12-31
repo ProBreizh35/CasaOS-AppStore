@@ -1,7 +1,7 @@
 name: authelia
 services:
   authelia:
-    image: authelia/authelia:latest
+    image: authelia/authelia:4
     restart: unless-stopped 
     environment:
       - TZ=$TZ
