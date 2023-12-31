@@ -16,8 +16,8 @@ services:
       TZ: $TZ
       GOTIFY_DATABASE_DIALECT: sqlite3
       GOTIFY_DATABASE_CONNECTION: data/gotify.db
-      GOTIFY_DEFAULTUSER_NAME: admin
-      GOTIFY_DEFAULTUSER_PASS: Bzh354422.@#{
+      GOTIFY_DEFAULTUSER_NAME: casaos
+      GOTIFY_DEFAULTUSER_PASS: casaos
       GOTIFY_PASSSTRENGTH: 10
       GOTIFY_UPLOADEDIMAGESDIR: data/images
       GOTIFY_PLUGINSDIR: data/plugins
@@ -46,3 +46,8 @@ x-casaos:
   category: Utilities
   description:
     fr_fr: Gotify est un system de notification auto heberger
+  tips:
+    before_install:
+      fr_fr:  |
+        Pseudo: casaos
+        Mots de passe : casaos  
