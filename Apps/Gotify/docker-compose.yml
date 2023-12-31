@@ -26,7 +26,7 @@ services:
         source: /DATA/AppData/$AppID/data
         target: /gotify
         mode: rw
-        allocation": automatic
+        allocation: automatic
     x-casaos:
       ports:
         - container: "80"
