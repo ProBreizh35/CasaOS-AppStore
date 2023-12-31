@@ -15,12 +15,12 @@ services:
     environment:
       TZ: $TZ
       GOTIFY_DATABASE_DIALECT: sqlite3
-      GOTIFY_DATABASE_CONNECTION: data/gotify.db
+      GOTIFY_DATABASE_CONNECTION: gotify/gotify.db
       GOTIFY_DEFAULTUSER_NAME: casaos
       GOTIFY_DEFAULTUSER_PASS: casaos
       GOTIFY_PASSSTRENGTH: 10
-      GOTIFY_UPLOADEDIMAGESDIR: data/images
-      GOTIFY_PLUGINSDIR: data/plugins
+      GOTIFY_UPLOADEDIMAGESDIR: gotify/images
+      GOTIFY_PLUGINSDIR: gotify/plugins
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/data
