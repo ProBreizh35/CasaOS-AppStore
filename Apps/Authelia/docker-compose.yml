@@ -5,6 +5,7 @@ services:
     restart: unless-stopped 
     environment:
       - TZ=$TZ
+    volumes:
       - type: bind
         source: /DATA/AppData/$AppID
         target: /app/config
@@ -23,7 +24,7 @@ x-casaos:
     en_us: Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies by allowing, denying, or redirecting requests.
     fr_fr: Authélia est un serveur d'authentification et d'autorisation open-source fournissant une authentification à deux facteurs connexion (SSO) pour vos applications via un portail web. Il agit comme un compagnon pour proxys inversés par autoriser, refuser ou rediriger les demandes.
   developer: authelia
-  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/icon.png
+  icon: https://github.com/ProBreizh35/CasaOS-AppStore/blob/Authelia/Apps/Authelia/icon.png
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/screenshot-1.jpg
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/authelia/screenshot-2.jpg
