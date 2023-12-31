@@ -23,7 +23,7 @@ services:
       GOTIFY_PLUGINSDIR: data/plugins
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID
+        source: /DATA/AppData/$AppID/data
         target: /gotify
     x-casaos:
       ports:
