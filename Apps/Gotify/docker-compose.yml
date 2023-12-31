@@ -25,7 +25,7 @@ services:
       - type: bind
         source: /DATA/AppData/$AppID/data
         target: /gotify
-        mode": rw
+        mode: rw
         allocation": automatic
     x-casaos:
       ports:
