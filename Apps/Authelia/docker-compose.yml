@@ -11,11 +11,11 @@ services:
       - TZ=$TZ
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID
-        target: /app/config
+        source: /DATA/AppData/$AppID/config
+        target: /Authelia
     x-casaos:
       volumes:
-        - container: /app/config
+        - container: /Authelia
           description:
             en_us: Authelia data directory.
             fr_fr: Répertoire des données de Authelia
