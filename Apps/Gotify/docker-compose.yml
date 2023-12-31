@@ -15,23 +15,23 @@ services:
     environment:
       TZ: $TZ
       GOTIFY_DATABASE_DIALECT: sqlite3
-      GOTIFY_DATABASE_CONNECTION: gotify/gotify.db
+      GOTIFY_DATABASE_CONNECTION: /gotify/data/gotify.db
       GOTIFY_DEFAULTUSER_NAME: casaos
       GOTIFY_DEFAULTUSER_PASS: casaos
       GOTIFY_PASSSTRENGTH: 10
-      GOTIFY_UPLOADEDIMAGESDIR: gotify/images
-      GOTIFY_PLUGINSDIR: gotify/plugins
+      GOTIFY_UPLOADEDIMAGESDIR: /gotify/data/images
+      GOTIFY_PLUGINSDIR: /gotify/data/plugins
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/data
-        target: /gotify
+        target: /gotify/data
     x-casaos:
       ports:
         - container: "80"
           description:
             en_us: ""
       volumes:
-        - container: /gotify
+        - container: /gotify/data
           description:
             en_us: ""
     container_name: gotify
