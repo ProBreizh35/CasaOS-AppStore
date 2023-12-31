@@ -12,10 +12,10 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/config
-        target: /Authelia
+        target: /authelia/config
     x-casaos:
       volumes:
-        - container: /Authelia
+        - container: /authelia/config
           description:
             en_us: Authelia data directory.
             fr_fr: Répertoire des données de Authelia
