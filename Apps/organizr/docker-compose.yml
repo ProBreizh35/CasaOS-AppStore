@@ -2,9 +2,9 @@ services:
   organizr:
     image: organizr/organizr:linux-arm64
     deploy:
-      #resources:
-        #reservations:
-          #memory: 64M
+      resources:
+        reservations:
+          memory: 64M
     network_mode: bridge
     ports:
       - target: 80
