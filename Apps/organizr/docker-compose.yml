@@ -18,15 +18,15 @@ services:
       PGID: "1000"
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/config
-        target: /organizr/config
+        source: /DATA/AppData/$AppID
+        target: /organizr
     x-casaos:
       ports:
         - container: "80"
           description:
             en_us: ""
       volumes:
-        - container: /organizr/config
+        - container: /organizr
           description:
             en_us: "data from organizr"
             fr_fr: "Donnée de organizr"

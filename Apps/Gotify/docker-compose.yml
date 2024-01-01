@@ -39,6 +39,7 @@ services:
 x-casaos:
   architectures:
     - arm64
+  port_map: "2222"
   main: Gotify
   author: ProBreizh35
   developer: Gotify
