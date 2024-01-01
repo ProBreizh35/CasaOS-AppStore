@@ -15,7 +15,6 @@ services:
       TZ: $TZ
       PUID: 1000
       PGID: 1000
-
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/config
@@ -33,7 +32,10 @@ services:
     container_name: organizr
 x-casaos:
   architectures:
+    - amd64
+    - "386"
     - arm64
+    - arm
   main: organizr
   author: ProBreizh35
   developer: organizr
