@@ -14,8 +14,8 @@ services:
     restart: always
     environment:
       TZ: $TZ
-      PUID: 1000
-      PGID: 1000
+      PUID: "1000"
+      PGID: "1000"
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/config
@@ -37,6 +37,7 @@ x-casaos:
     - "386"
     - arm64
     - arm
+  port_map: "2220"
   main: organizr
   author: ProBreizh35
   developer: organizr
