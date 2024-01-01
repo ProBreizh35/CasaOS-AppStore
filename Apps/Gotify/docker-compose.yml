@@ -33,22 +33,23 @@ services:
       volumes:
         - container: /gotify/data
           description:
-            en_us: ""
+            en_us: "data from gotify"
+            fr_fr: "Donnée de gotify"
     container_name: gotify
 x-casaos:
   architectures:
-    - amd64
-    - "386"
     - arm64
-    - arm
   main: Gotify
   author: ProBreizh35
   developer: Gotify
   category: Utilities
   description:
+    en_us: Gotify is a self-hosted notification system
     fr_fr: Gotify est un system de notification auto heberger
   tips:
     before_install:
       fr_fr:  |
         Pseudo: casaos
-        Mots de passe : casaos  
+        Mots de passe : casaos
+        Petit + pour les notification via qbtorrent ; allez dans les paramètre, téléchargement et dans éxecuter un programe externe entré curl "https://push.example.de/message?token=<apptoken>" -F "title=my title" -F "message=my message" -F "priority=5".
+        Biensur remplacer "https://push.example.de" et "<apptoken>" par vos informations !

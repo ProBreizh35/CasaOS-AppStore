@@ -1,0 +1,43 @@
+services:
+  organizr:
+    image: organizr/organizr:linux-arm64
+    deploy:
+      #resources:
+        #reservations:
+          #memory: 64M
+    network_mode: bridge
+    ports:
+      - target: 80
+        published: "2220"
+        protocol: tcp
+    restart: always
+    environment:
+      TZ: $TZ
+      PUID: 1000
+      PGID: 1000
+
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /organizr/config
+    x-casaos:
+      ports:
+        - container: "80"
+          description:
+            en_us: ""
+      volumes:
+        - container: /organizr/config
+          description:
+            en_us: "data from organizr"
+            fr_fr: "Donnée de organizr"
+    container_name: organizr
+x-casaos:
+  architectures:
+    - arm64
+  main: organizr
+  author: ProBreizh35
+  developer: organizr
+  category: Utilities
+  description:
+    en_us: organizr is a self-hosted dashboard
+    fr_fr: organizr est un tableau de bord auto heberger
