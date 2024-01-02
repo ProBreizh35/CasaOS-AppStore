@@ -31,7 +31,7 @@ x-casaos:
     - "386"
     - arm64
     - arm
-  port_map: "127.0.0.1:9095:9095"
+  port_map: "9095"
   main: authelia
   author: ProBreizh35
   category: Network
