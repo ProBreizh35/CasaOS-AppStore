@@ -14,8 +14,8 @@ services:
     restart: always
     environment:
       TZ: $TZ
-      PUID: "1000"
-      PGID: "1000"
+      PUID: $PUID
+      PGID: $PGID
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID

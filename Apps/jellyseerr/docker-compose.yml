@@ -1,0 +1,45 @@
+name: jellyseerr
+services:
+  jellyseerr:
+    image: fallenbagel/jellyseerr:1.7.0
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    network_mode: bridge
+    ports:
+      - target: 5055
+        published: "5055"
+        protocol: tcp
+    restart: unless-stopped
+    environment:
+      PUID: $PGID
+      PGID: $PUID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /jellyseerr/config
+    x-casaos:
+      ports:
+        - container: "5055"
+          description:
+            en_us: ""
+      volumes:
+        - container: /jellyseerr/config
+          description:
+            en_us: "data from jellyseerr"
+            fr_fr: "Donnée de jellyseerr"
+    container_name: jellyseerr
+    labels:
+      - "diun.enable=true"
+x-casaos:
+  architectures:
+    - amd64
+    - "386"
+    - arm64
+    - arm
+  port_map: "5055"
+  main: jellyseerr
+  author: ProBreizh35
+  category: Network

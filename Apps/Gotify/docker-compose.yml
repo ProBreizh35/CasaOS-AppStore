@@ -50,7 +50,10 @@ x-casaos:
   tips:
     before_install:
       fr_fr:  |
-        Pseudo: casaos
-        Mots de passe : casaos
+        compte administrateur par defaut :
+
+        | Username | Password |
+        | -------- | -------- |
+        | `casaos` | `casaos` | 
         Petit + pour les notification via qbtorrent ; allez dans les paramètre, téléchargement et dans éxecuter un programe externe entré curl "https://push.example.de/message?token=<apptoken>" -F "title=my title" -F "message=my message" -F "priority=5".
         Biensur remplacer "https://push.example.de" et "<apptoken>" par vos informations !
