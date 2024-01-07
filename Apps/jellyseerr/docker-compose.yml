@@ -42,4 +42,4 @@ x-casaos:
   port_map: "5055"
   main: jellyseerr
   author: ProBreizh35
-  category: Network
+  category: Media

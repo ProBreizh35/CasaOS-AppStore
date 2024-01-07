@@ -1,7 +1,7 @@
 name: gotify
 services:
   gotify:
-    image: gotify/server-arm64:2.4.0
+    image: gotify/server:2.4.0
     deploy:
       resources:
         reservations:

@@ -1,7 +1,7 @@
 name: organizr
 services:
   organizr:
-    image: organizr/organizr:linux-arm64
+    image: organizr/organizr:2.1.2460
     deploy:
       resources:
         reservations:
