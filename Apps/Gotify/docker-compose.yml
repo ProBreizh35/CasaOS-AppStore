@@ -38,7 +38,8 @@ services:
     container_name: gotify
 x-casaos:
   architectures:
-    - arm64
+    - amd64
+    - "386"
   port_map: "2222"
   main: Gotify
   author: ProBreizh35
