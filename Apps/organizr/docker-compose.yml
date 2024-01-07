@@ -1,7 +1,7 @@
 name: organizr
 services:
   organizr:
-    image: organizr/organizr:2.1.2460
+    image: organizr/organizr
     deploy:
       resources:
         reservations:
